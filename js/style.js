@@ -23,3 +23,13 @@ if (codeForm) {
         finalCode.innerHTML = `&lt;br />&lt;p style="padding-top: 20px; font-family: ${headFont};text-align: center; width: 450px; margin: auto; border: ${border}; border-bottom:none; background-color: #${bgColor};">&lt;font size="6">&lt;font color="#${headFC}">NAME&lt;/font>&lt;/font>&lt;/p>&lt;p style="padding: 10px; padding-left: 20px; padding-right: 20px; width: 450px; margin: auto; font-family: ${bodyFont}; border: ${border}; border-top: none; background-color: #${bgColor};">&lt;font color="#${bodyFC}">BODY TEXT&lt;/font>&lt;/p>&lt;br />`
     })
 }
+
+function copyButton(id) {
+    var copyText = gID(id)
+
+    copyText.select()
+
+    navigator.clipboard.writeText(copyText.value)
+
+    alert('The code is now copied to your clipboard! :D')
+}
